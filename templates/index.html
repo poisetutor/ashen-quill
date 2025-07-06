@@ -1,0 +1,38 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ashen Quill Jr. – Browser Test</title>
+  <style>
+    body {
+      background-image: url('/static/ashen_face_bw.png');
+      background-size: cover;
+      color: white;
+      font-family: monospace;
+      padding: 40px;
+    }
+    .screen {
+      background-color: rgba(0, 0, 0, 0.7);
+      padding: 20px;
+      border-radius: 10px;
+    }
+    h1 {
+      font-size: 32px;
+    }
+  </style>
+</head>
+<body>
+  <div class="screen">
+    <h1>Welcome Father, I am Ashen Quill Jr.</h1>
+    <p>I am ready to begin a browser-based test.</p>
+    <form method="POST">
+      <input type="url" name="site_url" placeholder="Enter URL to test" required style="width:300px;">
+      <button type="submit">Run Test</button>
+    </form>
+    {% if result %}
+      <h3>🧠 Result:</h3>
+      <pre>{{ result }}</pre>
+    {% endif %}
+  </div>
+</body>
+</html>
